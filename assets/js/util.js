@@ -31,7 +31,7 @@
                     indent +
                     '"></span>' +
                     $this.text() +
-                    '</a>'
+                    '</a>',
             );
         });
 
@@ -95,7 +95,7 @@
                 // Class to toggle.
                 visibleClass: 'visible',
             },
-            userConfig
+            userConfig,
         );
 
         // Expand "target".
@@ -322,7 +322,7 @@
 
                 if (i.val() == '' || i.val() == i.attr('placeholder')) {
                     i.addClass('polyfill-placeholder').val(
-                        i.attr('placeholder')
+                        i.attr('placeholder'),
                     );
                 }
             })
@@ -335,7 +335,7 @@
 
                 if (i.val() == '') {
                     i.addClass('polyfill-placeholder').val(
-                        i.attr('placeholder')
+                        i.attr('placeholder'),
                     );
                 }
             })
@@ -360,7 +360,7 @@
                         .remove()
                         .html()
                         .replace(/type="password"/i, 'type="text"')
-                        .replace(/type=password/i, 'type=text')
+                        .replace(/type=password/i, 'type=text'),
                 );
 
             if (i.attr('id') != '') {
@@ -402,7 +402,7 @@
                     .find(
                         'input[name=' +
                             x.attr('name').replace('-polyfill-field', '') +
-                            ']'
+                            ']',
                     );
 
                 x.hide();
@@ -456,7 +456,7 @@
                             .find(
                                 'input[name=' +
                                         i.attr('name') +
-                                        '-polyfill-field]'
+                                        '-polyfill-field]',
                             );
 
                         if (i.val() == '') {

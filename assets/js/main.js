@@ -60,7 +60,7 @@
             on = function() {
                 $bg.removeClass('fixed').css(
                     'transform',
-                    'matrix(1,0,0,1,0,0)'
+                    'matrix(1,0,0,1,0,0)',
                 );
 
                 $window.on('scroll._parallax', function() {
@@ -70,7 +70,7 @@
 
                     $bg.css(
                         'transform',
-                        'matrix(1,0,0,1,0,' + pos * intensity + ')'
+                        'matrix(1,0,0,1,0,' + pos * intensity + ')',
                     );
                 });
             };
@@ -122,7 +122,7 @@
 
     // Toggle.
     $navPanelToggle = $(
-        '<a href="#navPanel" id="navPanelToggle">Menu</a>'
+        '<a href="#navPanel" id="navPanelToggle">Menu</a>',
     ).appendTo($wrapper);
 
     // Change toggle styling once we've scrolled past the header.
@@ -142,7 +142,7 @@
             '<nav>' +
             '</nav>' +
             '<a href="#navPanel" class="close"></a>' +
-            '</div>'
+            '</div>',
     )
         .appendTo($body)
         .panel({
