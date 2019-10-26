@@ -61,6 +61,7 @@
                 $bg.removeClass('fixed').css(
                     'transform',
                     'matrix(1,0,0,1,0,0)',
+
                 );
 
                 $window.on('scroll._parallax', function() {
@@ -71,6 +72,7 @@
                     $bg.css(
                         'transform',
                         'matrix(1,0,0,1,0,' + pos * intensity + ')',
+
                     );
                 });
             };
@@ -143,6 +145,7 @@
             '</nav>' +
             '<a href="#navPanel" class="close"></a>' +
             '</div>',
+
     )
         .appendTo($body)
         .panel({
