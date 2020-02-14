@@ -44,7 +44,7 @@
     "eslint-plugin-import": "2.20.1",
     "package-json-validator": "0.6.3",
     "prettier": "1.19.1",
-    "stylelint": "13.1.0",
+    "stylelint": "13.2.0",
     "stylelint-scss": "3.14.0",
     "stylelint-config-recommended": "3.0.0",
     "stylelint-config-recommended-scss": "4.2.0",
