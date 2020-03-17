@@ -39,9 +39,11 @@
     "lint-yml": "yamllint --ignore=node_modules/**/*.{yaml,yml} --ignore=vale/**/*.{yaml,yml} **/*.{yaml,yml}"
   },
   "dependencies": {
+    "acorn": ">=7.1.1",
     "eslint": "6.8.0",
     "eslint-config-google": "0.14.0",
     "eslint-plugin-import": "2.20.1",
+    "minimist": ">=1.2.2",
     "package-json-validator": "0.6.3",
     "prettier": "1.19.1",
     "stylelint": "13.2.1",
