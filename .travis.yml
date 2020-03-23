@@ -47,7 +47,6 @@ script:
     --file-ignore "/node_modules/"
     /site
   - npm run lint-js
-  - npm run stylelint-css
   - npm run prettier-code
 
 deploy:
