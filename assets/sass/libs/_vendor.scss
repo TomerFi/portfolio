@@ -309,13 +309,11 @@ $vendor-values: (
     // Expand property?
     @if $expandProperty {
         @each $vendor in $vendor-prefixes {
-            /* stylelint-disable indentation */
             #{$vendor}#{$property}: #{str-replace-all(
                     $value,
                     '-prefix-',
                     $vendor
                 )};
-            /* stylelint-enable indentation */
         }
     }
 
