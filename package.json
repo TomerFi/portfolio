@@ -33,24 +33,17 @@
     "lint-js-no-inline:fix": "eslint --no-inline-config --report-unused-disable-directives --fix .",
     "prettier-code": "prettier --check **/*.{html,css,scss}",
     "prettier-code:fix": "prettier --write **/*.{html,css,scss}",
-    "stylelint-css": "stylelint **/*.{html,css,scss}",
-    "stylelint-css:fix": "stylelint --fix **/*.{html,css,scss}",
     "validate-pkg": "pjv --filenmae package.json --spec npm --warnings --recommendations",
     "lint-yml": "yamllint --ignore=node_modules/**/*.{yaml,yml} --ignore=vale/**/*.{yaml,yml} **/*.{yaml,yml}"
   },
   "dependencies": {
     "acorn": ">=7.1.1",
-    "eslint": "6.8.0",
+    "eslint": "^6.8.0",
     "eslint-config-google": "0.14.0",
     "eslint-plugin-import": "2.20.1",
     "minimist": ">=1.2.2",
     "package-json-validator": "0.6.3",
-    "prettier": "1.19.1",
-    "stylelint": "13.2.1",
-    "stylelint-scss": "3.16.0",
-    "stylelint-config-recommended": "3.0.0",
-    "stylelint-config-recommended-scss": "4.2.0",
-    "stylelint-config-standard": "20.0.0",
+    "prettier": "2.0.1",
     "yaml-lint": "1.2.4"
   },
   "private": true,
@@ -106,26 +99,5 @@
     "singleQuote": true,
     "tabWidth": 4,
     "trailingComma": "all"
-  },
-  "stylelint": {
-    "extends": [
-      "stylelint-config-recommended",
-      "stylelint-config-recommended-scss",
-      "stylelint-config-standard"
-    ],
-    "rules": {
-      "at-rule-empty-line-before": null,
-      "at-rule-no-unknown": null,
-      "block-closing-brace-newline-after": null,
-      "declaration-block-no-duplicate-properties": null,
-      "declaration-block-no-shorthand-property-overrides": null,
-      "declaration-colon-newline-after": null,
-      "font-family-no-missing-generic-family-keyword": null,
-      "indentation": 4,
-      "no-descending-specificity": null,
-      "no-duplicate-selectors": null,
-      "scss/at-rule-no-unknown": null,
-      "value-list-comma-newline-after": null
-    }
   }
 }
