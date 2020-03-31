@@ -10,4 +10,4 @@ update_configs:
     default_assignees:
       - "TomerFi"
     default_labels:
-      - "dependabot"
+      - "dependencies"
