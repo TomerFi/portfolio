@@ -43,7 +43,7 @@
     "eslint-plugin-import": "2.20.2",
     "minimist": ">=1.2.2",
     "package-json-validator": "0.6.3",
-    "prettier": "2.0.1",
+    "prettier": "2.0.2",
     "yaml-lint": "1.2.4"
   },
   "private": true,
