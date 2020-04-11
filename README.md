@@ -9,8 +9,8 @@
 
 <!-- Real Links -->
 [0]: https://portfolio.tomfi.info
-[1]: https://github.com/TomerFi/portfolio/actions?query=workflow%Deploy
+[1]: https://github.com/TomerFi/portfolio/actions?query=workflow%SiteVerify
 
 <!-- Badges Links -->
-[gh-deploy-status]: https://github.com/TomerFi/portfolio/workflows/Deploy/badge.svg
+[gh-deploy-status]: https://github.com/TomerFi/portfolio/workflows/SiteVerify/badge.svg
 [visit-my-portfolio]: https://img.shields.io/badge/Visit-My%20Portfolio-blueviolet?style=for-the-badge&logo=HTML5
