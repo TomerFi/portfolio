@@ -1,5 +1,4 @@
 ---
-
 name: DocsLint
 
 on: pull_request

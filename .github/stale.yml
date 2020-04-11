@@ -1,5 +1,4 @@
 ---
-
 daysUntilStale: 60
 staleLabel: wontfix
 pulls:

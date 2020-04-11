@@ -3,22 +3,10 @@ root = true
 
 [*]
 charset = utf-8
-end_of_line = crlf
+end_of_line = lf
 insert_final_newline = true
 
-[**.java]
-indent_style = space
-indent_size = 4
-max_line_length = 100
-trim_trailing_whitespace = true
-
-[**.xml]
-indent_style = space
-indent_size = 2
-max_line_length = 80
-trim_trailing_whitespace = true
-
-[**.{yaml,yml}]
+[**.{yaml,yml,yamllint}]
 indent_style = space
 indent_size = 2
 max_line_length = 100
@@ -26,10 +14,12 @@ trim_trailing_whitespace = true
 
 [**.md]
 trim_trailing_whitespace = false
+end_of_line = crlf
 max_line_length = 120
 
 [**.{html,js,css,scss}]
 indent_style = space
 indent_size = 4
+end_of_line = crlf
 trim_trailing_whitespace = true
 insert_final_newline = true
