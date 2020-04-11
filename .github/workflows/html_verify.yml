@@ -33,7 +33,7 @@ jobs:
       - name: Prettier lint html files
         uses: creyD/prettier_action@v2.1
         with:
-          prettier_options: "--loglevel=debug **/*.html"
+          prettier_options: "--check --loglevel=debug **/*.html"
           branch: ${{ github.head_ref }}
           dry: true
         env:
