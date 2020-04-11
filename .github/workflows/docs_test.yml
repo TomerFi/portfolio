@@ -6,7 +6,7 @@ on: pull_request
 jobs:
   docs-lint:
     runs-on: ubuntu-latest
-    name: Lint doc files
+    name: Doc files lint
     steps:
       - name: Source checkout
         uses: actions/checkout@v2
