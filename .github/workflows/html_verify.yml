@@ -1,4 +1,5 @@
 ---
+
 name: HtmlVerify
 
 on: pull_request
@@ -17,7 +18,8 @@ jobs:
         uses: chabad360/htmlproofer@v1.1
         with:
           directory: "./"
-          arguments: "--empty-alt-ignore --check-favicon --check-img-http --enforce-https --only-4xx"
+          arguments: |
+            "--empty-alt-ignore --check-favicon --check-img-http --enforce-https --only-4xx"
 
       - name: Vale spelling and grammar checks
         uses: errata-ai/vale-action@v1.0.4
