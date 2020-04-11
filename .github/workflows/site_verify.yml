@@ -17,11 +17,6 @@ jobs:
           directory: "./"
           arguments: "--empty-alt-ignore --check-favicon --check-img-http --enforce-https --only-4xx"
 
-      - name: Validate html and css files
-        uses: Cyb3r-Jak3/html5validator-action@v0.4
-        with:
-          CSS: true
-
       - name: Run vale for spelling and grammar check
         uses: errata-ai/vale-action@v1.0.4
         env:
