@@ -1,4 +1,4 @@
-# [![visit-my-portfolio]][0]</br>[![gh-site-verify-status]][1]
+# [![visit-my-portfolio]][0]</br>[![gh-deploy-status]][1]
 
 ## Acknowledgement and Credits
 
@@ -9,8 +9,8 @@
 
 <!-- Real Links -->
 [0]: https://portfolio.tomfi.info
-[1]: https://github.com/TomerFi/portfolio/actions?query=workflow%SiteVerify
+[1]: https://github.com/TomerFi/portfolio/actions?query=workflow%Deploy
 
 <!-- Badges Links -->
-[gh-site-verify-status]: https://github.com/TomerFi/portfolio/workflows/SiteVerify/badge.svg
+[gh-deploy-status]: https://github.com/TomerFi/portfolio/workflows/Deploy/badge.svg
 [visit-my-portfolio]: https://img.shields.io/badge/Visit-My%20Portfolio-blueviolet?style=for-the-badge&logo=HTML5
