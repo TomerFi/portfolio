@@ -16,8 +16,9 @@ jobs:
         env:
           GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          yamllint_strict: true
           yamllint_comment: true
+          yamllint_config_filepath: .yamllint
+          yamllint_strict: true
 
       - name: Lint markdown files
         uses: prologic/action-markdownlint@v0.1
