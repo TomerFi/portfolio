@@ -1,31 +1,35 @@
 ---
-name: SiteVerify
+name: HtmlVerify
 
 on: pull_request
 
 jobs:
-  site-verify:
+  html-verify:
     runs-on: ubuntu-latest
-    name: Verify site files
+    name: Html verify
     steps:
       - name: Source checkout
         uses: actions/checkout@v2
 
-      - name: HTML proofer
+      - name: Html proofer
         uses: chabad360/htmlproofer@v1.1
         with:
           directory: "./"
           arguments: "--empty-alt-ignore --check-favicon --check-img-http --enforce-https --only-4xx"
 
-      - name: Run vale for spelling and grammar check
+      - name: Vale spelling and grammar checks
         uses: errata-ai/vale-action@v1.0.4
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        with:
+          styles: |
+            https://github.com/errata-ai/Microsoft/releases/latest/download/Microsoft.zip
+            https://github.com/errata-ai/write-good/releases/latest/download/write-good.zip
 
-      - name: Lint html and css files with Prettier
+      - name: Prettier lint html files
         uses: creyD/prettier_action@v2.1
         with:
-          prettier_options: "--check --loglevel=debug **/*.html"
+          prettier_options: "--check **/*.html"
           branch: ${{ github.head_ref }}
           dry: true
         env:

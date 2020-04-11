@@ -1,5 +1,5 @@
 ---
-name: Deploy
+name: DeployGhPages
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
       - dev
 
 jobs:
-  deploy:
+  deploy-ghpages:
     runs-on: ubuntu-latest
     name: Build pre-release and publish to GitHub
     steps:
