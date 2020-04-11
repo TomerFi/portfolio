@@ -9,7 +9,7 @@ on:
 jobs:
   deploy-ghpages:
     runs-on: ubuntu-latest
-    name: Build pre-release and publish to GitHub
+    name: Deploy to GH-Pages
     steps:
       - name: Source checkout
         uses: actions/checkout@v2

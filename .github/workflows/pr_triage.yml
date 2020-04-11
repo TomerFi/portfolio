@@ -1,5 +1,5 @@
 ---
-name: PullRequestsUtils
+name: PullRequestsTriage
 
 on: pull_request
 
