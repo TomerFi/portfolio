@@ -29,7 +29,7 @@ jobs:
       - name: Lint web files with Prettier
         uses: creyD/prettier_action@v2.1
         with:
-          prettier_options: "--sort ${{ steps.getValeList.outputs.forVale }}"
+          prettier_options: "--check ${{ steps.getValeList.outputs.forVale }}"
           branch: ${{ github.head_ref }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
