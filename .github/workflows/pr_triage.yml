@@ -1,0 +1,14 @@
+---
+name: PullRequestTriage
+
+on: pull_request
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    name: Pull request triage
+    steps:
+      - name: Auto assign reviewers
+        uses: kentaro-m/auto-assign-action@v1.1.0
+        with:
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"

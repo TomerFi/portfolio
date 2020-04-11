@@ -1,0 +1,42 @@
+---
+name: DocsLint
+
+on: pull_request
+
+jobs:
+  docs-lint:
+    runs-on: ubuntu-latest
+    name: Doc files lint
+    steps:
+      - name: Source checkout
+        uses: actions/checkout@v2
+
+      - name: Lint yaml files
+        uses: karancode/yamllint-github-action@v1.0.0
+        env:
+          GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          yamllint_config_filepath: .yamllint
+          yamllint_strict: true
+
+      - name: Lint markdown files
+        uses: prologic/action-markdownlint@v0.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-check
+          level: error
+
+      - name: Check for spelling mistakes
+        uses: reviewdog/action-misspell@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          locale: "US"
+          reporter: github-pr-check
+          level: error
+
+      - name: Check links in markdown files
+        uses: urlstechie/urlchecker-action@0.1.9
+        with:
+          file_types: .md
+          force_pass: false
+          white_listed_urls: https://html5up.net/

@@ -1,10 +1,10 @@
-# Configuration for auto-assign - https://github.com/apps/auto-assign
 ---
-
 addReviewers: true
-addAssignees: true
 reviewers:
   - tomerfi
-skipKeywords:
-  - wip
-numberOfReviewers: 1
+numberOfReviewers: 0
+
+addAssignees: true
+assignees:
+  - tomerfi
+numberOfAssignees: 0

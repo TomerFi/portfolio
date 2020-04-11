@@ -1,0 +1,31 @@
+---
+name: HtmlVerify
+
+on: pull_request
+
+jobs:
+  html-verify:
+    runs-on: ubuntu-latest
+    name: Html verify
+    steps:
+      - name: Source checkout
+        uses: actions/checkout@v2
+
+      - name: Html proofer
+        uses: chabad360/htmlproofer@v1.1
+        with:
+          directory: "./"
+          arguments: |
+            --empty-alt-ignore --check-favicon --check-img-http --enforce-https --only-4xx
+
+      - name: Vale spelling and grammar checks
+        uses: errata-ai/vale-action@v1.0.4
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        with:
+          styles: |
+            https://github.com/errata-ai/Microsoft/releases/latest/download/Microsoft.zip
+            https://github.com/errata-ai/Google/releases/latest/download/Google.zip
+            https://github.com/errata-ai/write-good/releases/latest/download/write-good.zip
+            https://github.com/errata-ai/proselint/releases/latest/download/proselint.zip
+            https://github.com/errata-ai/Joblint/releases/latest/download/Joblint.zip
