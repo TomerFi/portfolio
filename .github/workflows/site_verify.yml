@@ -27,7 +27,7 @@ jobs:
       - name: Lint html and css files with Prettier
         uses: creyD/prettier_action@v2.1
         with:
-          prettier_options: "--check  --loglevel=debug '**/*.{html,css,scss}'"
+          prettier_options: "--check --loglevel=debug '**/*.html'"
           branch: ${{ github.head_ref }}
           dry: true
         env:
