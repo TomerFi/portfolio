@@ -1,0 +1,47 @@
+---
+name: SiteVerify
+
+on: pull_request
+
+jobs:
+  site-verify:
+    runs-on: ubuntu-latest
+    name: Verify site files
+    steps:
+      - name: Source checkout
+        uses: actions/checkout@v2
+
+      - name: HTML proofer
+        uses: chabad360/htmlproofer@v1.1
+        with:
+          directory: "./"
+          arguments: "--empty-alt-ignore --check-favicon --check-img-http --enforce-https --only-4xx"
+
+      - name: Test Files
+        uses: Cyb3r-Jak3/html5validator-action@v0.3
+        with:
+          CSS: true
+
+      - name: Run vale for spelling and grammar check
+        uses: errata-ai/vale-action@v1.0.4
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+      - name: Get vale file list
+        id: getValeList
+        run: echo "::set-output name=forVale::$(cat .valelist)"
+
+      - name: Prettify the JS Code
+        uses: creyD/prettier_action@v2.1
+        with:
+          prettier_options: "--sort "${{ steps.getValeList.outputs.date }}
+          branch: ${{ github.head_ref }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: eslint
+        uses: reviewdog/action-eslint@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          reporter: github-pr-check
+          eslint_flags: "--report-unused-disable-directives ."
