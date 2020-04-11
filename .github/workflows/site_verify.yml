@@ -26,10 +26,10 @@ jobs:
         id: getValeList
         run: echo "::set-output name=forVale::$(cat .valelist)"
 
-      - name: Prettify the JS Code
+      - name: Lint web files with Prettier
         uses: creyD/prettier_action@v2.1
         with:
-          prettier_options: "--sort ${{ steps.getValeList.outputs.date }}"
+          prettier_options: "--sort ${{ steps.getValeList.outputs.forVale }}"
           branch: ${{ github.head_ref }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
