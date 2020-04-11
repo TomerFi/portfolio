@@ -31,3 +31,4 @@ jobs:
         with:
           file_types: .md
           force_pass: false
+          white_listed_urls: https://html5up.net/
