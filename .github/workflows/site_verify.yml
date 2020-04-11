@@ -34,7 +34,7 @@ jobs:
       - name: Prettify the JS Code
         uses: creyD/prettier_action@v2.1
         with:
-          prettier_options: "--sort "${{ steps.getValeList.outputs.date }}
+          prettier_options: "--sort ${{ steps.getValeList.outputs.date }}"
           branch: ${{ github.head_ref }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
