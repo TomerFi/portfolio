@@ -23,8 +23,8 @@ jobs:
     container:
       image: jdkato/vale:latest
       volumes:
-        - .github/styles:/styles
-        - ${{ pwd }}:/docs
+        - ".github/styles:/styles"
+        - "./:/docs"
       options: --workdir /docs
     steps:
       - name: run
