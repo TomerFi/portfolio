@@ -1,4 +1,8 @@
 aioswitcher
-api
+alexa
+configs
+css
 figenblat
+gitea
+href
 tomer
