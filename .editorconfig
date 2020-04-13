@@ -14,7 +14,6 @@ trim_trailing_whitespace = true
 
 [**.md]
 trim_trailing_whitespace = false
-end_of_line = crlf
 max_line_length = 120
 
 [**.{html,js,css,scss}]
