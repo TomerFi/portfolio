@@ -26,4 +26,4 @@ jobs:
         - ./:/docs
       options: --workdir /docs
       steps:
-        - run: .
+        - run: "*.html"
