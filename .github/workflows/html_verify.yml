@@ -24,7 +24,7 @@ jobs:
       image: jdkato/vale:latest
       volumes:
         - .github/styles:/styles
-        - .:/docs
+        - ${{ pwd }}:/docs
       options: --workdir /docs
     steps:
       - name: run
