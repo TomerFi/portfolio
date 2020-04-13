@@ -37,5 +37,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          prettier_options: '--check *.html'
+          prettier_options: '--check --loglevel debug  *.html'
           branch: ${{ github.head_ref }}
+          dry: true
