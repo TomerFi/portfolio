@@ -25,3 +25,5 @@ jobs:
         - .github/styles:/styles
         - ./:/docs
       options: --workdir /docs
+      steps:
+        - run: .
