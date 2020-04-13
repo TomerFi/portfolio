@@ -20,6 +20,8 @@ jobs:
 
   vale-lint:
     runs-on: ubuntu-latest
+    env:
+      pwd: ./
     container:
       image: jdkato/vale:latest
       volumes:
