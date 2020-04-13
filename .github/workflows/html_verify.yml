@@ -19,6 +19,7 @@ jobs:
             --empty-alt-ignore --check-favicon --check-img-http --enforce-https --only-4xx
 
   vale-lint:
+    runs-on: ubuntu-latest
     container:
       image: jdkato/vale:latest
       volumes:
