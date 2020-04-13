@@ -18,16 +18,7 @@ jobs:
           arguments: |
             --empty-alt-ignore --check-favicon --check-img-http --enforce-https --only-4xx
 
-  vale-lint:
-    runs-on: ubuntu-latest
-    env:
-      pwd: ./
-    container:
-      image: jdkato/vale:latest
-      volumes:
-        - .github/styles:/styles
-        - ${{ env.pwd }}:/docs
-      options: --workdir /docs --entrypoint vale
-    steps:
-      - name: run
-        run: .
+      - name: Vale spelling and grammar checks
+        uses: gaurav-nelson/github-action-vale-lint@v0.1.0
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
