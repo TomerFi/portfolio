@@ -20,14 +20,11 @@ jobs:
           arguments: |
             --empty-alt-ignore --check-favicon --check-img-http --enforce-https --only-4xx
 
+      - name: Get vale file list
+        id: getValeList
+        run: echo "::set-output name=forVale::$(cat .valelist)"
+
       - name: Vale spelling and grammar checks
         uses: errata-ai/vale-action@v1.0.4
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-        with:
-          styles: |
-            https://github.com/errata-ai/Microsoft/releases/latest/download/Microsoft.zip
-            https://github.com/errata-ai/Google/releases/latest/download/Google.zip
-            https://github.com/errata-ai/write-good/releases/latest/download/write-good.zip
-            https://github.com/errata-ai/proselint/releases/latest/download/proselint.zip
-            https://github.com/errata-ai/Joblint/releases/latest/download/Joblint.zip
