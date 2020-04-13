@@ -23,9 +23,9 @@ jobs:
     container:
       image: jdkato/vale:latest
       volumes:
-        - ".github/styles:/styles"
-        - "./:/docs"
-      options: --workdir /docs
+        - .github/styles:/styles
+        - ${{ env.pwd }}:/docs
+      options: --workdir /docs --entrypoint vale
     steps:
       - name: run
         run: .
