@@ -31,11 +31,3 @@ jobs:
             https://github.com/errata-ai/write-good/releases/latest/download/write-good.zip
             https://github.com/errata-ai/proselint/releases/latest/download/proselint.zip
             https://github.com/errata-ai/Joblint/releases/latest/download/Joblint.zip
-
-      - name: Prettify html files
-        uses: creyD/prettier_action@v2.1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          prettier_options: '--check --loglevel debug  *.html'
-          branch: ${{ github.head_ref }}
