@@ -19,6 +19,6 @@ jobs:
             --empty-alt-ignore --check-favicon --check-img-http --enforce-https --only-4xx
 
       - name: Vale spelling and grammar checks
-        uses: gaurav-nelson/github-action-vale-lint@v0.1.0
+        uses: errata-ai/vale-action@v1.0.4
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
