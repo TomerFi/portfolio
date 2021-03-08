@@ -4,7 +4,7 @@ name: DeployGhPages
 on:
   push:
     branches:
-      - dev
+      - redirection
 
 jobs:
   deploy-ghpages:

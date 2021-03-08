@@ -1,8 +1,0 @@
-aioswitcher
-alexa
-configs
-css
-figenblat
-gitea
-href
-tomer
